@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メディアに関するオンライン実験 参加のお願い | 慶應義塾大学 李光鎬研究会</title>
+<style>
+:root {
+--primary: #1a365d;
+--primary-light: #2b6cb0;
+--accent: #d69e2e;
+--accent-hover: #b7791f;
+--bg-color: #f7fafc;
+--card-bg: #ffffff;
+--text-main: #2d3748;
+--text-sub: #4a5568;
+--border: #e2e8f0;
+--warning-bg: #fffaf0;
+--warning-border: #fbd38d;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+line-height: 1.7;
+color: var(--text-main);
+background-color: var(--bg-color);
+padding-bottom: 60px;
+}
+
+header {
+background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+color: white;
+text-align: center;
+padding: 40px 20px;
+margin-bottom: 30px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.org-name {
+font-size: 0.95rem;
+letter-spacing: 0.05em;
+opacity: 0.9;
+margin-bottom: 8px;
+}
+
+header h1 {
+font-size: 1.8rem;
+font-weight: 700;
+line-height: 1.4;
+margin-bottom: 12px;
+}
+
+.header-sub {
+font-size: 0.95rem;
+opacity: 0.95;
+background: rgba(255, 255, 255, 0.15);
+display: inline-block;
+padding: 4px 16px;
+border-radius: 20px;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.section {
+background: var(--card-bg);
+border-radius: 12px;
+padding: 28px 24px;
+margin-bottom: 24px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+border: 1px solid var(--border);
+}
+
+.section h2 {
+font-size: 1.3rem;
+color: var(--primary);
+border-bottom: 2px solid var(--primary-light);
+padding-bottom: 8px;
+margin-bottom: 16px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.steps-container {
+display: flex;
+flex-direction: column;
+gap: 16px;
+margin: 20px 0;
+}
+
+.step-card {
+display: flex;
+gap: 16px;
+background: #edf2f7;
+padding: 16px;
+border-radius: 8px;
+align-items: flex-start;
+}
+
+.step-badge {
+background: var(--primary);
+color: white;
+font-weight: bold;
+font-size: 0.85rem;
+padding: 4px 10px;
+border-radius: 6px;
+white-space: nowrap;
+}
+
+.step-body h3 {
+font-size: 1.05rem;
+margin-bottom: 4px;
+color: var(--primary);
+}
+
+.step-body p {
+font-size: 0.9rem;
+color: var(--text-sub);
+}
+
+.reward-box {
+background-color: var(--warning-bg);
+border: 1px solid var(--warning-border);
+border-radius: 8px;
+padding: 18px;
+margin: 16px 0;
+}
+
+.reward-box ul {
+list-style-type: disc;
+padding-left: 20px;
+font-size: 0.95rem;
+}
+
+.reward-box li {
+margin-bottom: 6px;
+}
+
+.experiment-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 14px;
+margin-top: 20px;
+}
+
+.exp-button {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: #ffffff;
+border: 2px solid var(--primary-light);
+color: var(--primary);
+text-decoration: none;
+padding: 18px 12px;
+border-radius: 8px;
+font-weight: bold;
+transition: all 0.2s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.exp-button:hover {
+background: var(--primary-light);
+color: white;
+transform: translateY(-2px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exp-button span.title {
+font-size: 1.1rem;
+margin-bottom: 4px;
+}
+
+.exp-button span.sub {
+font-size: 0.8rem;
+font-weight: normal;
+opacity: 0.85;
+}
+
+.form-cta {
+background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+border: 2px dashed #319795;
+text-align: center;
+padding: 24px;
+border-radius: 12px;
+margin-top: 10px;
+}
+
+.btn-submit {
+display: inline-block;
+background-color: var(--accent);
+color: #744210;
+color: #ffffff;
+background-color: #dd6b20;
+text-decoration: none;
+font-size: 1.15rem;
+font-weight: bold;
+padding: 14px 32px;
+border-radius: 50px;
+margin-top: 16px;
+transition: all 0.2s ease;
+box-shadow: 0 4px 10px rgba(221, 107, 32, 0.3);
+}
+
+.btn-submit:hover {
+background-color: #c05621;
+transform: translateY(-2px);
+box-shadow: 0 6px 14px rgba(221, 107, 32, 0.4);
+}
+
+.note {
+font-size: 0.85rem;
+color: #718096;
+margin-top: 12px;
+}
+
+footer {
+text-align: center;
+font-size: 0.85rem;
+color: #a0aec0;
+margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="org-name">慶應義塾大学メディア・コミュニケーション研究所 李光鎬研究会</div>
+<h1>メディアに関する実験参加のお願い</h1>
+<div class="header-sub">※結果は今年度の三田祭（展示）にて発表予定です</div>
+</header>
+
+<div class="container">
+
+<!-- 概要・お願い -->
+<section class="section">
+<h2>研究について</h2>
+<p>
+慶應義塾大学メディア・コミュニケーション研究所 李光鎬研究会では、現在メディアに関するオンライン実験を行っております。
+研究データの収集にご協力いただけますよう、何卒よろしくお願い申し上げます。
+</p>
+</section>
+
+<!-- 参加の流れ -->
+<section class="section">
+<h2>ご参加の流れ</h2>
+<div class="steps-container">
+
+<div class="step-card">
+<div class="step-badge">STEP 1</div>
+<div class="step-body">
+<h3>実験に参加する</h3>
+<p>全6種類の実験をご用意しております。下のリンクから各実験へお進みください（1つのみの参加も可能です）。</p>
+</div>
+</div>
+
+<div class="step-card">
+<div class="step-badge">STEP 2</div>
+<div class="step-body">
+<h3>実験終了時にメールアドレスを入力</h3>
+<p>各実験の最後の画面にメールアドレス入力欄が表示されます。謝礼受取用のアドレスをご入力ください。</p>
+</div>
+</div>
+
+<div class="step-card">
+<div class="step-badge">STEP 3</div>
+<div class="step-body">
+<h3>謝礼の受領登録フォームを入力</h3>
+<p>実験への参加が終わりましたら、ページ下部の登録フォームより必要事項の送信をお願いいたします。</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 謝礼について -->
+<section class="section">
+<h2>謝礼について</h2>
+<div class="reward-box">
+<ul>
+<li><strong>1つの実験完了につき</strong>：Amazonギフトカード（eギフトカード）<strong>100円分</strong>を進呈いたします。</li>
+<li><strong>上限金額</strong>：お一人様<strong>最大500円分まで</strong>となります。</li>
+<li>
+<strong>全実験へのご協力のお願い</strong>：<br>
+謝礼の上限は500円までとなりますが、より正確な研究分析のため、<strong>ぜひ全6つの実験すべてにご参加いただけますと大変助かります。</strong>
+</li>
+<li>
+<strong>個人情報の取り扱い</strong>：<br>
+各実験終了時に入力いただいたメールアドレスは、謝礼（eギフトカード）の送付以外の目的には一切使用いたしません。
+</li>
+</ul>
+</div>
+</section>
+
+<!-- 実験一覧 -->
+<section class="section">
+<h2>実験URL一覧</h2>
+<p style="font-size: 0.95rem; color: var(--text-sub);">
+以下のボタンより、各実験へアクセスしてご参加ください。
+</p>
+
+<div class="experiment-grid">
+<a href="https://rikoyasuda0904-ai.github.io/kokokuhan20261009/" target="_blank" rel="noopener noreferrer" class="exp-button">
+<span class="title">実験 1</span>
+<span class="sub">参加する ➔</span>
+</a>
+
+<a href="https://rio-c5.github.io/2026-drama-research/" target="_blank" rel="noopener noreferrer" class="exp-button">
+<span class="title">実験 2</span>
+<span class="sub">参加する ➔</span>
+</a>
+
+<a href="https://s-shikano-spec.github.io/Keioganhozemi_voice/" target="_blank" rel="noopener noreferrer" class="exp-button">
+<span class="title">実験 3</span>
+<span class="sub">参加する ➔</span>
+</a>
+
+<a href="https://ryoshida-cyber.github.io/movie/" target="_blank" rel="noopener noreferrer" class="exp-button">
+<span class="title">実験 4</span>
+<span class="sub">参加する ➔</span>
+</a>
+
+<a href="https://mahirowakita.github.io/2026mitaron3/" target="_blank" rel="noopener noreferrer" class="exp-button">
+<span class="title">実験 5</span>
+<span class="sub">参加する ➔</span>
+</a>
+
+<a href="https://ishizuka-lgtm.github.io/kokoku10122/" target="_blank" rel="noopener noreferrer" class="exp-button">
+<span class="title">実験 6</span>
+<span class="sub">参加する ➔</span>
+</a>
+</div>
+</section>
+
+<!-- 受領登録フォーム -->
+<section class="section">
+<h2>実験参加後の受領登録</h2>
+<div class="form-cta">
+<p><strong>実験への参加が終わりましたら、以下のフォームより必要事項のご登録をお願いいたします。</strong></p>
+<p class="note">※謝礼のAmazonギフトカードは、受領書登録の完了を確認した後に順次発送いたします。</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeOdzmkB27Sy96fflGtg7DVQgtn_M637HUwD8KYSzh5kbP5uQ/viewform" target="_blank" rel="noopener noreferrer" class="btn-submit">
+受領登録フォームを開く ➔
+</a>
+</div>
+</section>
+
+</div>
+
+<footer>
+&copy; 慶應義塾大学メディア・コミュニケーション研究所 李光鎬研究会
+</footer>
+
+</body>
+</html>
